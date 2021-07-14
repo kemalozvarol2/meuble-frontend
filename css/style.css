@@ -196,7 +196,7 @@ ul.nav{
 }
 
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1280px) {
      .body-container{
           width: 100%;
      }
