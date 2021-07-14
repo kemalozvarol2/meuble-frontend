@@ -28,15 +28,13 @@ a{
 }
 .title-container{
      position: absolute;
-     right: 0;
      top: 50%;
      transform: translateY(-50%);
 }
 .title{
      padding: 0 1rem;
      font-size: 6rem;
-     background: var(--dark-color);
-     color: var(--light-color);
+     color: var(--dark-color);
      cursor: default;
 }
 .top-container{
