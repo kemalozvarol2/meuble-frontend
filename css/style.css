@@ -31,7 +31,7 @@ a{
 .title-container{
      position: absolute;
      width: 100%;
-     top: 25%;
+     top: 20%;
      transform: translateY(-50%);
 }
 .title{
@@ -41,6 +41,7 @@ a{
      font-size: 6rem;
      color: var(--dark-color);
      cursor: default;
+     text-shadow: 2px 2px #ff0000, -2px -2px #0ff;
 }
 .top-container{
      background: url('../images/couch.jpg');
@@ -117,6 +118,9 @@ ul.nav-mobile li i{
 .nav-mobile li i:hover{
      font-size: 2rem;
      transform: rotate(180deg);
+     opacity: 1;
+     background: var(--dark-color);
+     color: var(--light-color);
 }
 .nav li{
      margin: 2rem 1.5rem;
