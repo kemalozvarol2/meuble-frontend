@@ -13,10 +13,23 @@
           <div class="top-container">
                <ul class="nav">
                     <li>Shop</li>
-                    <a href="#wwd"><li>Blog</li></a>
+                    <li><a href="#wwd">Blog</a></li>
                     <li>Products</li>
                     <li>Contact</li>
                </ul>
+               <ul class="nav-mobile">
+                    <li id="show_mobile_nav"><i class="fas fa-bars"></i></li>
+               </ul>
+
+               <div class="mobile-navigation">
+                    <ul>
+                         <li>Shop</li>
+                         <li><a href="#wwd">Blog</a></li>
+                         <li>Products</li>
+                         <li>Contact</li>
+                    </ul>
+               </div>
+
                <div class="title-container">
                     <h1 class="title">Better Furniture</h1>
                </div>
@@ -64,6 +77,15 @@
           </div>
      </div>
      <script src="https://kit.fontawesome.com/e9410834e0.js" crossorigin="anonymous"></script>
+     <script
+       src="https://code.jquery.com/jquery-3.6.0.min.js"
+       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+       crossorigin="anonymous"></script>
+     <script>
+          $("#show_mobile_nav").click(function(){
+               $(".mobile-navigation").slideToggle(400);
+          });
+     </script>
 
 </body>
 </html>
