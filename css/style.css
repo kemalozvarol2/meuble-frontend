@@ -27,7 +27,6 @@ a{
      text-decoration: none;
 }
 
-
 .title-container{
      position: absolute;
      width: 100%;
@@ -53,6 +52,17 @@ a{
      position: relative;
      z-index: 5;
 }
+
+ul.nav li{
+     margin: 2rem 1.5rem;
+     font-size: 1.5rem;
+     cursor: pointer;
+     transition: 200ms opacity ease;
+     font-weight: 400;
+}
+ul.nav li:hover{
+     opacity: .5;
+}
 ul.nav{
      width: max-content;
      left: 0;
@@ -62,6 +72,7 @@ ul.nav{
      display: flex;
      color: var(--dark-color);
 }
+
 ul.nav-mobile{
      position: fixed;
      width: max-content;
@@ -71,12 +82,26 @@ ul.nav-mobile{
      padding-top: 2rem;
      color: var(--dark-color);
 }
-
 ul.nav-mobile li i{
      background: var(--light-color);
      padding: 2rem;
      border-radius: 50%;
      opacity: .4;
+}
+ul.nav-mobile{
+     display: none;
+}
+ul.nav-mobile li i{
+     font-size: 1.4rem;
+     cursor: pointer;
+     transition: 1s all ease;
+}
+ul.nav-mobile li i:hover{
+     font-size: 2rem;
+     transform: rotate(180deg);
+     opacity: 1;
+     background: var(--dark-color);
+     color: var(--light-color);
 }
 
 .mobile-navigation{
@@ -99,7 +124,6 @@ ul.nav-mobile li i{
      transition: 1s all ease;
      cursor: pointer;
 }
-
 .mobile-navigation ul li:hover{
      color: rgba(0,0,0,.3);
      border-bottom: 1px solid rgba(0,0,0,.1);
@@ -107,31 +131,6 @@ ul.nav-mobile li i{
 }
 
 
-
-
-.nav-mobile li i{
-     font-size: 1.4rem;
-     cursor: pointer;
-     transition: 1s all ease;
-}
-
-.nav-mobile li i:hover{
-     font-size: 2rem;
-     transform: rotate(180deg);
-     opacity: 1;
-     background: var(--dark-color);
-     color: var(--light-color);
-}
-.nav li{
-     margin: 2rem 1.5rem;
-     font-size: 1.5rem;
-     cursor: pointer;
-     transition: 200ms opacity ease;
-     font-weight: 400;
-}
-.nav li:hover{
-     opacity: .5;
-}
 
 .wwd{
      padding: 4rem;
@@ -174,6 +173,7 @@ ul.nav-mobile li i{
      -ms-align-items: center;
      align-items: center;
      padding: 6rem 4rem;
+     margin-bottom: 3rem;
 }
      .card{
           text-align: center;
@@ -244,11 +244,78 @@ ul.nav-mobile li i{
      color: #fff;
 }
 
-.nav-mobile{
-     display: none;
+.blog-posts{
+     margin-top: 5rem;
+     background: var(--dark-color);
+     padding: 5rem 0;
+     border-radius: 5%;
+}
+     .blog-post{
+          background: var(--light-color);
+          width: 100%;
+          margin: 0 auto;
+          padding: 5rem 10rem;
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex;
+          justify-content: center;
+          -ms-align-items: center;
+          align-items: center;
+          position: relative;
+     }
+     .blog-post:nth-child(even){
+          background: var(--light-color);
+     }
+     .blog-post:nth-child(odd){
+          background: var(--dark-color);
+          color: var(--light-color);
+     }
+     .blog-post img{
+          max-width: 40%;
+          border-radius: 2rem;
+     }
+     .blog-post-content{
+          padding: 5rem;
+     }
+     .blog-posts-title{
+          font-size: 3rem;
+          color: var(--light-color);
+          text-align: center;
+          margin-top: -3rem;
+          margin-bottom: 1.3rem;
+     }
+     .blog-post-content h2{
+     font-size: 2.4rem;
+     margin-bottom: 3rem;
 }
 
+.contact{
+     background: var(--dark-color);
+     padding: 0 5rem;
+     margin-top: 15rem;
+     color: var(--light-color);
+     display: -webkit-flex;
+     display: -ms-flex;
+     display: flex;
+     gap: 4rem;
+     justify-content: center;
+     -ms-align-items: center;
+     align-items: center;
+     letter-spacing: .1em;
+}
 
+.contact-form h2{
+     font-size: 2.5rem;
+     text-transform: uppercase;
+}
+
+.contact-form p{
+     margin: 2rem 0;
+}
+
+.contact-form h5, .contact-form p{
+     font-size: 1rem;
+}
 
 
 @media screen and (max-width:1280px) {
@@ -277,6 +344,35 @@ ul.nav-mobile li i{
 
      .card:hover{
           transform: scale(1.02);
+     }
+
+
+     .blog-posts{
+          margin-top: 5rem;
+          background: none;
+          padding: 0;
+          border-radius: 5%;
+     }
+     .blog-posts-title{
+          color: var(--dark-color);
+     }
+
+     .blog-post{
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+     }
+     .blog-post img{
+          max-width: 100%;
+          width: 100%;
+          border-radius: 0;
+     }
+     .contact{
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          padding: 5rem;
+          min-height: 100vh;
      }
 }
 

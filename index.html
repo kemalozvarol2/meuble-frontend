@@ -12,10 +12,10 @@
 
           <div class="top-container">
                <ul class="nav">
-                    <li>Shop</li>
-                    <li><a href="#wwd">Blog</a></li>
-                    <li>Products</li>
-                    <li>Contact</li>
+                    <li><a href="/shop.html">Shop</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
                </ul>
                <ul class="nav-mobile">
                     <li id="show_mobile_nav"><i class="fas fa-bars"></i></li>
@@ -23,10 +23,10 @@
 
                <div class="mobile-navigation">
                     <ul>
-                         <li>Shop</li>
-                         <li><a href="#wwd">Blog</a></li>
-                         <li>Products</li>
-                         <li>Contact</li>
+                         <li><a href="/shop.html">Shop</a></li>
+                         <li><a href="#products">Products</a></li>
+                         <li><a href="#blog">Blog</a></li>
+                         <li><a href="#contact">Contact</a></li>
                     </ul>
                </div>
 
@@ -35,7 +35,7 @@
                </div>
           </div>
 
-          <div class="wwd" id="wwd">
+          <div class="wwd" id="products">
                <h1>Neler yaptık?</h1>
           </div>
 
@@ -75,6 +75,45 @@
 
                </div>
           </div>
+
+          <div class="blog" id="blog">
+               <div class="blog-posts">
+                    <h1 class="blog-posts-title">Blog Yazıları</h1>
+                    <div class="blog-post">
+                         <img src="images/list-1.jpg" alt="Koltuk">
+                         <div class="blog-post-content">
+                              <h2 class="post-title">Lorem Ipsum</h2>
+                              <p class="post-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quos beatae veniam minus error, reprehenderit ut dignissimos tenetur voluptate, accusantium sint consequuntur quaerat quo. Quibusdam quod repudiandae blanditiis est veritatis?</p>
+                         </div>
+                    </div>
+                    <div class="blog-post">
+                         <img src="images/list-2.jpg" alt="Koltuk">
+                         <div class="blog-post-content">
+                              <h2 class="post-title">Lorem Ipsum</h2>
+                              <p class="post-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quos beatae veniam minus error, reprehenderit ut dignissimos tenetur voluptate, accusantium sint consequuntur quaerat quo. Quibusdam quod repudiandae blanditiis est veritatis?</p>
+                         </div>
+                    </div>
+                    <div class="blog-post">
+                         <img src="images/list-3.jpg" alt="Koltuk">
+                         <div class="blog-post-content">
+                              <h2 class="post-title">Lorem Ipsum</h2>
+                              <p class="post-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quos beatae veniam minus error, reprehenderit ut dignissimos tenetur voluptate, accusantium sint consequuntur quaerat quo. Quibusdam quod repudiandae blanditiis est veritatis?</p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <div class="contact" id="contact">
+               <div class="contact-form">
+                    <h2>Contact Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate optio eligendi ullam porro distinctio mollitia tenetur obcaecati, culpa illum molestias. Corrupti expedita optio suscipit, voluptatum asperiores dignissimos magni in laudantium.</p>
+                    <h5><i class="fas fa-phone"></i> +90 535 028 7677</h5>
+               </div>
+               <div class="contact-map">
+                    <img src="images/map.png" alt="">
+               </div>
+          </div>
+
      </div>
      <script src="https://kit.fontawesome.com/e9410834e0.js" crossorigin="anonymous"></script>
      <script
@@ -84,6 +123,11 @@
      <script>
           $("#show_mobile_nav").click(function(){
                $(".mobile-navigation").slideToggle(400);
+          });
+          $('.body-container').on("click", function () {
+               if($('.mobile-navigation').is(":visible")){
+                   $(".mobile-navigation").hide(400);
+               }
           });
      </script>
 
