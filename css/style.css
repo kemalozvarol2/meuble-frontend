@@ -217,6 +217,7 @@ ul.nav-mobile li i{
           }
           .card-bed{
                background: url('../images/list-3.jpg');
+               background-position: center right;
                -webkit-background-size: cover;
                background-size: cover;
           }
