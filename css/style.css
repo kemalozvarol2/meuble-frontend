@@ -113,6 +113,30 @@ ul.nav-mobile li i:hover{
      font-size: 2rem;
      font-weight: 400;
 }
+.mobile-navigation .close-nav{
+     position: absolute;
+     right: 3rem;
+     top: 1rem;
+     cursor: pointer;
+     height: 3rem;
+     width: 3rem;
+     font-size: 1.5rem;
+     display: -webkit-flex;
+     display: -ms-flex;
+     display: flex;
+     -ms-align-items: center;
+     align-items: center;
+     justify-content: center;
+     background: #666;
+     color: #ddd;
+     border-radius: 50%;
+     transition: .4s all ease-out;
+}
+.mobile-navigation .close-nav:hover{
+     transform: rotate(-180deg);
+     background: #333;
+     color: #fff;
+}
 .mobile-navigation ul{
      padding: 2rem 4rem 4rem 4rem;
      list-style-type: none;
@@ -130,16 +154,14 @@ ul.nav-mobile li i:hover{
      width: max-content;
 }
 
-
-
-.wwd{
+.products{
      padding: 4rem;
      text-align: center;
      color: var(--dark-color);
      position: relative;
      font-size: 1.4rem;
 }
-.wwd::after, .wwd::before{
+.products::after, .products::before{
      position: absolute;
      content: '';
      width: 150px;
@@ -148,16 +170,16 @@ ul.nav-mobile li i:hover{
      z-index: 3;
      background: #fff;
 }
-.wwd h1{
+.products h1{
      position: relative;
      z-index: 4;
      color: var(--dark-color);
 }
-.wwd::before{
+.products::before{
      right: 50%;
      transform:skew(0, 20deg);
 }
-.wwd::after{
+.products::after{
      left: 50%;
      transform:skew(0, -20deg);
 }
@@ -233,7 +255,8 @@ ul.nav-mobile li i:hover{
                border-radius: 1rem;
           }
           .card:hover{
-               cursor: default;
+               cursor: pointer;
+               border-radius: 2rem;
                transform: scale(1.2);
           }
           .card:hover .card-color{
@@ -241,8 +264,8 @@ ul.nav-mobile li i:hover{
                background: rgba(0,0,0,.4);
           }
           .card:hover .card-info, .card:hover .card-info h1{
-     color: #fff;
-}
+               color: #fff;
+          }
 
 .blog-posts{
      margin-top: 5rem;
@@ -285,9 +308,9 @@ ul.nav-mobile li i:hover{
           margin-bottom: 1.3rem;
      }
      .blog-post-content h2{
-     font-size: 2.4rem;
-     margin-bottom: 3rem;
-}
+          font-size: 2.4rem;
+          margin-bottom: 3rem;
+     }
 
 .contact{
      background: var(--dark-color);
@@ -303,19 +326,16 @@ ul.nav-mobile li i:hover{
      align-items: center;
      letter-spacing: .1em;
 }
-
-.contact-form h2{
-     font-size: 2.5rem;
-     text-transform: uppercase;
-}
-
-.contact-form p{
-     margin: 2rem 0;
-}
-
-.contact-form h5, .contact-form p{
-     font-size: 1rem;
-}
+     .contact-form h2{
+          font-size: 2.5rem;
+          text-transform: uppercase;
+     }
+     .contact-form p{
+          margin: 2rem 0;
+     }
+     .contact-form h5, .contact-form p{
+          font-size: 1rem;
+     }
 
 
 @media screen and (max-width:1280px) {
@@ -376,6 +396,18 @@ ul.nav-mobile li i:hover{
      }
 }
 
+@media screen and (max-width:1100px){
+     .cards-container{
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+     }
+     .card{
+          padding: 5rem;
+          margin: -1rem auto;
+     }
+}
+
 @media screen and (max-width:750px) {
 
      .title-container{
@@ -386,7 +418,7 @@ ul.nav-mobile li i:hover{
           font-size: 4rem;
      }
 
-     .wwd h1{
+     .products h1{
           font-size: 2.4rem;
      }
 

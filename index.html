@@ -22,8 +22,9 @@
                </ul>
 
                <div class="mobile-navigation">
+                    <span class="close-nav" id="close-nav"><i class="fas fa-times"></i></span>
                     <ul>
-                         <li><a href="/shop.html">Shop</a></li>
+                         <li><a href="#">Shop</a></li>
                          <li><a href="#products">Products</a></li>
                          <li><a href="#blog">Blog</a></li>
                          <li><a href="#contact">Contact</a></li>
@@ -35,7 +36,7 @@
                </div>
           </div>
 
-          <div class="wwd" id="products">
+          <div class="products" id="products">
                <h1>Neler yaptık?</h1>
           </div>
 
@@ -124,10 +125,8 @@
           $("#show_mobile_nav").click(function(){
                $(".mobile-navigation").slideToggle(400);
           });
-          $('.body-container').on("click", function () {
-               if($('.mobile-navigation').is(":visible")){
-                   $(".mobile-navigation").hide(400);
-               }
+          $("#close-nav").click(function(){
+               $(".mobile-navigation").slideToggle(400);
           });
      </script>
 
